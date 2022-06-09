@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+
+:root {
+  /* COLOR */
+  --primary-soft-red: hsl(7, 99%, 70%);
+  --primary-yellow: hsl(51, 100%, 49%);
+  --primary-dark-cyan: hsl(167, 40%, 24%);
+  --primary-dark-blue: hsl(198, 62%, 26%);
+  --primary-dark-moderate-cyan: hsl(168, 34%, 41%);
+  --primary-dark-desaturate-blue: hsl(212, 27%, 19%);
+  --primary-dark-grayish-blue: hsl(213, 9%, 39%);
+  --primary-lighter-grayish-blue: hsl(232, 10%, 55%);
+  --primary-grayish-blue: hsl(210, 4%, 67%);
+  --primary-white: hsl(0, 0%, 100%);
+
+  /* FONT SIZE */
+  --font-size: 112.5%;
+
+  /* FONT WEIGHT */
+  --bold: 900;
+  --medium: 700;
+  --lighter: 600;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: sans-serif;
+  font-size: var(--font-size);
+  color: var(--primary-grayish-blue);
+  font-family: "Fraunces", "Barlow", sans-serif;
+}
+
+header {
+  background-image: url(./images/desktop/image-header.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ************************* */
+/* Reusable Class */
+/* ************************* */
+.container {
+  padding: 1em 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.three-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.description-container {
+  padding: 150px;
+}
+
+/* ************************* */
+/* Navigation Class */
+/* ************************* */
+.navigation-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 54px;
+}
+
+.item-img {
+  flex: 1;
+}
+
+.items {
+  border-radius: 30px;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8%;
+}
+
+.items a {
+  color: var(--primary-white);
+  font-size: 0.725em;
+}
+
+.items:hover {
+  background-color: var(--primary-white);
+  transition: all 0.2s ease-in-out;
+  font-weight: var(--medium);
+  text-transform: uppercase;
+}
+
+.items:hover a {
+  color: #000;
+  letter-spacing: -1;
+}
+
+.primary-heading {
+  color: var(--primary-white);
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.heading-title {
+  text-transform: uppercase;
+  font-size: 60px;
+  letter-spacing: 8px;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.icon-arr-down {
+  display: block;
+  margin: auto;
+}
+
+/* ************************* */
+/* Main Section */
+/* ************************* */
+.description-section {
+  background-color: var(--primary-white);
+}
+
+.hero-section {
+  width: 100%;
+  position: relative;
+}
+
+.img-sections {
+  width: 100%;
+  height: 100%;
+}
+
+.section-title {
+  font-size: 46px;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  font-weight: var(--bold);
+  color: var(--primary-dark-desaturate-blue);
+  margin-bottom: 30px;
+}
+
+.section-description {
+  letter-spacing: 0.2px;
+  font-size: 16px;
+  font-weight: lighter;
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.graphic-design {
+  background-image: url(./images/desktop/image-graphic-design.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.photography-design {
+  background-image: url(./images/desktop/image-photography.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.bottom-description {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+}
+
+.bottom-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: var(--bold);
+  margin-bottom: 30px;
+}
+
+.graphic-title {
+  color: var(--primary-dark-cyan);
+}
+
+.photography-title {
+  color: var(--primary-dark-blue);
+}
+
+.description-bottom {
+  text-align: center;
+}
+
+.graphic-description-bottom {
+  color: var(--primary-dark-moderate-cyan);
+}
+
+.photography-description-bottom {
+  color: var(--primary-dark-desaturate-blue);
+}
+
+/* ************************* */
+/* Testimonials Section */
+/* ************************* */
+.testimonials-section {
+  background-color: var(--primary-white);
+  width: 100%;
+  padding: 8rem 0;
+}
+
+.testimonials-section h3 {
+  text-align: center;
+  margin-bottom: 84px;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.user-testimonials {
+  border-radius: 50%;
+}
+
+/* ************************* */
+/* Media Query */
+/* ************************* */
+@media screen and (max-width: 720px) {
+  .cols {
+    grid-template-columns: 1fr;
+  }
+
+  .description-first-row {
+    grid-row: 2 / 2;
+  }
+}
